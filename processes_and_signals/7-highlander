@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Using while to display some phrases while receiving SIGTERM 
+god="I am invincible!!!"
+while :
+do
+	echo "To infinity and beyond"
+	sleep 2;
+	trap 'echo $god' SIGTERM;
+done
